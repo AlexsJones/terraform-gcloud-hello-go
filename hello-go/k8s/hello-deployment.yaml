@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hello-go
+  labels:
+    app: hello-go
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: hello-go
+  template:
+    metadata:
+      labels:
+        app: hello-go
+    spec:
+      containers:
+        - image: tibbar/hello-go:latest
+          imagePullPolicy: Always
+          name: hello-go
+          ports:
+            - containerPort: 9090
+              name: hello-go

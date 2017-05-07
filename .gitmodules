@@ -1,0 +1,3 @@
+[submodule "hello-go"]
+	path = hello-go
+	url = https://github.com/AlexsJones/hello-go.git
